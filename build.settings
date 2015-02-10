@@ -1,0 +1,67 @@
+settings =
+{
+	orientation =
+    {
+        default = "landscapeRight",  --initial launch orientation
+        --content = "",  --locked orientation of the Corona stage, independent of Native UI elements (iOS only)
+        supported = {"portrait", "portraitUpsideDown" }  --table of allowed options for auto-orientation
+    },
+    iphone =
+    {
+        plist =
+        {
+            CFBundleName = "FirstApp",
+            CFBundleIconFiles = {
+                "Icon.png",
+                "Icon@2x.png",
+                "Icon-60.png",
+                "Icon-60@2x.png",
+                "Icon-60@3x.png",
+                "Icon-72.png",
+                "Icon-72@2x.png",
+                "Icon-76.png",
+                "Icon-76@2x.png",
+                "Icon-Small-40.png",
+                "Icon-Small-40@2x.png",
+                "Icon-Small-40@3x.png",
+                "Icon-Small-50.png",
+                "Icon-Small-50@2x.png",
+                "Icon-Small.png",
+                "Icon-Small@2x.png",
+                "Icon-Small@3x.png"
+            },
+            UILaunchImages = {
+                {  -- iPhone 5 Portrait
+                    ["UILaunchImageMinimumOSVersion"] = "7.0",
+                    ["UILaunchImageName"] = "Default-568h",
+                    ["UILaunchImageOrientation"] = "Portrait",
+                    ["UILaunchImageSize"] = "{320, 568}"
+                },
+            },
+            UIApplicationExitsOnSuspend = false,
+            UIPrerenderedIcon = true,
+            UIStatusBarHidden = true,
+            UIAppFonts = { "AvenirLTStd-Black.otf","SourceCodePro-Black.ttf" },
+            MinimumOSVersion = "6.0",
+        },
+    },
+    android =
+    {
+        versionCode = "10", -- meaning 1.0 by convention
+        allowAppsReadOnlyAccessToFiles = false,
+        -- largeHeap = true,
+        --[[usesPermissions =
+        {
+            "android.permission.INTERNET",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION",
+        },
+        usesFeatures =
+        {
+            { name="android.hardware.camera", required=true },
+            { name="android.hardware.location", required=false },
+            { name="android.hardware.location.gps", required=false },
+        }]]--
+    },
+}
